@@ -3,6 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
 import 'package:study_material_app/database/semesterDatabase.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import 'aids.dart';
 
@@ -17,24 +18,11 @@ class _BookHomeState extends State<BookHome> {
   var subjectList = [];
 
   Future<void> _getUserDetails() async {
-    String uid = FirebaseAuth.instance.currentUser.uid;
-    DocumentSnapshot doc = await FirebaseFirestore.instance
-        .collection('UserDatabase')
-        .doc(uid)
-        .get();
-
-    if (doc.exists) {
-      // this will check availability of document
-      setState(() {
-        branch = doc.data()['Branch'];
-        semester = doc.data()['Semester'];
-      });
-    } else {
-      setState(() {
-        branch = 'User is not available';
-        semester = 'User is not available';
-      });
-    }
+    final SharedPreferences sharedPref = await SharedPreferences.getInstance();
+    setState(() {
+      branch = sharedPref.getString('branch');
+      semester = sharedPref.getString('semester');
+    });
     _getSubjectList();
     _getTileList();
   }
