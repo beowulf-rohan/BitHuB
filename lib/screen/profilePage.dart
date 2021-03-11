@@ -114,6 +114,14 @@ class _ProfilePageState extends State<ProfilePage> {
                                       sharedPreference.remove('branch');
                                       sharedPreference.remove('semester');
                                       sharedPreference.remove('roll');
+                                      print('Logged out');
+                                      print(
+                                          sharedPreference.getString('email'));
+                                      print(sharedPreference
+                                          .getString('semester'));
+                                      print(
+                                          sharedPreference.getString('branch'));
+                                      print(sharedPreference.getString('roll'));
                                       Navigator.pushReplacement(
                                           context,
                                           MaterialPageRoute(

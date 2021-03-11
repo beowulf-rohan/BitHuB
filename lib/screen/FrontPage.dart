@@ -52,6 +52,11 @@ class _FrontPageState extends State<FrontPage> {
         sharedPref.setString('branch', branch);
         sharedPref.setString('roll', roll);
         sharedPref.setBool('isFetched', true);
+        print('In FrontPage.dart');
+        print(sharedPref.getString('email'));
+        print(sharedPref.getString('semester'));
+        print(sharedPref.getString('branch'));
+        print(sharedPref.getString('roll'));
       }
     }
   }

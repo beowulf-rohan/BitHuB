@@ -158,6 +158,7 @@ class _SignUpPageState extends State<SignUpPage> {
                                       final SharedPreferences sharedPref =
                                           await SharedPreferences.getInstance();
                                       sharedPref.setString('email', emailVal);
+                                      sharedPref.setBool('isFetched', false);
                                       Navigator.pushNamed(
                                           context, SignupPageDetails.id);
                                     }

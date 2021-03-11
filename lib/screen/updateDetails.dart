@@ -158,6 +158,8 @@ class _UpdateScreenState extends State<UpdateScreen> {
                                 });
                                 sharedPref.setString('branch', branchVal);
                                 sharedPref.setString('semester', semesterVal);
+                                print(sharedPref.getString('semester'));
+                                print(sharedPref.getString('branch'));
                                 Navigator.pop(context);
                               }
                             });
