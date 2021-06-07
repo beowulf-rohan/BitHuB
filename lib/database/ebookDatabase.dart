@@ -87,12 +87,12 @@ class CS101 {
   List<Map<String, String>> books = [
     {
       'Prog in ANSI - C':
-          'https://drive.google.com/file/d/1a5NGFN-RbM2TX6Vxqd_Vq5-3YXWTAl2G/view?usp=sharing',
+          'https://drive.google.com/file/d/1TTD9o4YUVy3H2EUnE4U_T2f3GeGzSH2N/view?usp=sharing',
     },
     {
       'C Notes for Professionals':
           'https://drive.google.com/file/d/1tKt6aoz-vu3PuxauAcDmh25tP2WcPndw/view?usp=sharing',
-    }
+    },
   ];
 }
 
