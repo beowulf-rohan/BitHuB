@@ -300,7 +300,7 @@ class Tile extends StatelessWidget {
       if (await canLaunch(url)) {
         await launch(
           url,
-          forceSafariVC: true,
+          forceSafariVC: false,
           forceWebView: false,
           enableJavaScript: true,
         );
@@ -309,8 +309,8 @@ class Tile extends StatelessWidget {
       if (await canLaunch(url)) {
         await launch(
           url,
-          forceSafariVC: true,
-          forceWebView: true,
+          forceSafariVC: false,
+          forceWebView: false,
           enableJavaScript: true,
         );
       }
