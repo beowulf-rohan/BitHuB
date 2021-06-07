@@ -122,10 +122,8 @@ class _AboutUsState extends State<AboutUs> {
             Padding(
               padding: const EdgeInsets.fromLTRB(9, 0, 9, 0),
               child: UsersGuide(
-                  message: 'Version : v 1.0.0\n\n'
-                      'STABLE Internet connection required.\n\n'
+                  message:
                       'ATTENDANCE DATABASE is stored LOCALLY on USERS DEVICE. If app is uninstalled all records will be PERMANENTLY LOST.\n\n'
-                      'SEMESTER 3 database will be uploaded before MO21 starts.\n\n'
                       'Contact devs for app support.\n'),
             ),
             SizedBox(height: 30.0)
