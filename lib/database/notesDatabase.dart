@@ -399,6 +399,12 @@ class NotesDataabse {
           'https://drive.google.com/file/d/1xNm--1rasccyPnogqljlvlphGmo5UDBe/view?usp=sharing'
     },
   ];
+  List<Map<String, String>> DAA = [
+    {
+      '450 Cracker':
+          'https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view'
+    }
+  ];
   List getList(String subject) {
     // Sem 1
     if (subject == 'BECE') {
@@ -425,6 +431,11 @@ class NotesDataabse {
     }
     if (subject == 'BEE') {
       return BEE;
+    }
+
+    // PD's modification
+    if (subject == 'DAA') {
+      return DAA;
     }
     return new List<Map<String, String>>();
   }
