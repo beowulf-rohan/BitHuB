@@ -221,7 +221,7 @@ class _LoginPageState extends State<LoginPage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Text(
-                                'New to App?', //TODO: might have to change a/c to app name
+                                'New to App?', 
                                 style: TextStyle(color: Colors.white),
                               ),
                               SizedBox(

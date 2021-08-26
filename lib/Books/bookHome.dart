@@ -204,7 +204,7 @@ class _BookHomeState extends State<BookHome> {
   }
 
   Widget _getTileList() {
-    List<Widget> tileList = new List<Widget>();
+    List<Widget> tileList = [];
 
     tileList.add(Background(
       height1: 280.0,

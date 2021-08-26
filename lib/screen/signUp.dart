@@ -216,7 +216,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text(
-                                  'Have an account?', //TODO: might have to change a/c to app name
+                                  'Have an account?', 
                                   style: TextStyle(color: Colors.white),
                                 ),
                                 SizedBox(

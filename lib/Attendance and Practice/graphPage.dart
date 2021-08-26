@@ -44,7 +44,7 @@ class _GraphPageState extends State<GraphPage> {
     }
 
     if (userList == null) {
-      userList = List<User>();
+      userList = [];
       print('In if block');
       updateListView();
     }

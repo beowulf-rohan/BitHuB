@@ -426,6 +426,6 @@ class NotesDataabse {
     if (subject == 'BEE') {
       return BEE;
     }
-    return new List<Map<String, String>>();
+    return [];
   }
 }

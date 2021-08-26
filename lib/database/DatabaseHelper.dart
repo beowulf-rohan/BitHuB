@@ -98,7 +98,7 @@ class DatabaseHelper {
     print('Inside getNoteList');
     var noteMapList = await query();
     int count = noteMapList.length;
-    List<User> noteList = List<User>();
+    List<User> noteList = [];
     for (int i = 0; i < count; i++) {
       noteList.add(User.fromMapObject(noteMapList[i]));
     }

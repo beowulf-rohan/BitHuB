@@ -1465,7 +1465,7 @@ class Syllabus {
     else if (code == 'BE210')
       return BE210;*/
     else
-      return new List<Map<String, String>>();
+      return [];
   }
 }
 

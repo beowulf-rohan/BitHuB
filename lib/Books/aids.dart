@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:study_material_app/Animation/ComingSoon.dart';
 import 'package:study_material_app/Books/notesHome.dart';
 import 'package:study_material_app/Books/syllabus.dart';
-import 'package:url_launcher/url_launcher.dart';
-import 'package:rflutter_alert/rflutter_alert.dart';
 import 'package:study_material_app/Books/ebookHome.dart';
 import 'package:study_material_app/Videos/module.dart';
-import 'package:study_material_app/database/subjectCodeDatabase.dart';
 import 'package:study_material_app/Animation/CustomWidgets.dart';
-import 'package:study_material_app/database/Syllabus.dart';
 
 class Aids extends StatelessWidget {
   static const String id = 'Aids';
@@ -16,22 +11,6 @@ class Aids extends StatelessWidget {
   Widget build(BuildContext context) {
     final ScreenArguments args = ModalRoute.of(context).settings.arguments;
     String subject = args.subject;
-
-    SubjectCode ob = new SubjectCode();
-    String subjectCode = ob.subjectCode[subject];
-
-    Future<void> _launchInApp(String url) async {
-      if (await canLaunch(url)) {
-        await launch(url,
-            forceSafariVC: true, forceWebView: true, enableJavaScript: true);
-      } else {
-        Alert(
-                context: context,
-                title: 'Error occured',
-                desc: "Check your connections")
-            .show();
-      }
-    }
 
     return Scaffold(
       backgroundColor: Colors.black,
