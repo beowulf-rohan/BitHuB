@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1005015409191-n4ld8gr46ph90r98clsumllcravsh5gg.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bit.study_material_app",
+            "certificate_hash": "d327df3fceb10e1f873dc09bdf983128981eab56"
+          }
+        },
+        {
           "client_id": "1005015409191-fp6eqq1ircolbm2mhm3aj1id9cho6t1k.apps.googleusercontent.com",
           "client_type": 3
         }
