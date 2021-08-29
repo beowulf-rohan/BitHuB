@@ -11,6 +11,7 @@ import 'package:study_material_app/Holiday%20Calendar/HolidayPage.dart';
 import 'package:study_material_app/BIT_Bus/bus.dart';
 import 'package:study_material_app/screen/profilePage.dart';
 import 'package:flutter_web_browser/flutter_web_browser.dart';
+import 'package:in_app_update/in_app_update.dart';
 
 class FrontPage extends StatefulWidget {
   static const String id = 'FrontPage';
@@ -21,10 +22,29 @@ class FrontPage extends StatefulWidget {
 
 class _FrontPageState extends State<FrontPage> {
   String name, semester, branch, email, roll;
+  AppUpdateInfo _updateInfo;
+
   @override
   void initState() {
+    checkForUpdate();
     getValid().whenComplete(() {});
     super.initState();
+  }
+
+  Future<void> checkForUpdate() async {
+    InAppUpdate.checkForUpdate().then((info) {
+      setState(() {
+        _updateInfo = info;
+      });
+      if (_updateInfo.updateAvailability ==
+          UpdateAvailability.updateAvailable) {
+        print("Update Available....");
+        InAppUpdate.performImmediateUpdate();
+        print("Update in progress....");
+      } else {
+        print("No update Available....");
+      }
+    });
   }
 
   Future<void> getValid() async {
@@ -52,11 +72,6 @@ class _FrontPageState extends State<FrontPage> {
         sharedPref.setString('branch', branch);
         sharedPref.setString('roll', roll);
         sharedPref.setBool('isFetched', true);
-        print('In FrontPage.dart');
-        print(sharedPref.getString('email'));
-        print(sharedPref.getString('semester'));
-        print(sharedPref.getString('branch'));
-        print(sharedPref.getString('roll'));
       }
     }
   }
